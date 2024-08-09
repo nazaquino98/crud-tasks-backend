@@ -5,9 +5,9 @@ const app = (express())
 //usar middlwares
 app.use(json())
 
-import {router} from "./router/router.js" 
+import {tasksRouter} from "./router/tasks.router.js"
 
-app.use(router)
+app.use(tasksRouter)
 
 //correr servidor
 const PORT = 4000
