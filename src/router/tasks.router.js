@@ -1,12 +1,13 @@
-const {newConnection} = require("../db.js")
-const {getTasks, getTaskById, postTask, putTaskById, deleteTaskById} = require("../controllers/task.controllers.js")
-const router = require("express").Router()
+import { newConnection } from "../db.js"
+import { getTasks, getTaskById, postTask, putTaskById, deleteTaskById } from "../controllers/task.controllers.js"
+import {Router} from "express"
+const tasksRouter = Router()
 
 
-router.get("/tasks", getTasks)
-router.get("/task/:id", getTaskById)
-router.post("/task", postTask);
-router.put("/task/:id", putTaskById);
-router.delete("/task/:id", deleteTaskById);
+tasksRouter.get("/tasks", getTasks)
+tasksRouter.get("/task/:id", getTaskById)
+tasksRouter.post("/task", postTask);
+tasksRouter.put("/task/:id", putTaskById);
+tasksRouter.delete("/task/:id", deleteTaskById);
 
-module.exports = router
+export { tasksRouter }

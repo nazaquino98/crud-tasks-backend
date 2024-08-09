@@ -1,4 +1,4 @@
-const {newConnection} = require("../db.js")
+import { newConnection } from "../db.js"
 
 const getTasks = async (req, res) => {
     const connection = await newConnection()
@@ -40,4 +40,4 @@ const deleteTaskById = async (req, res) => {
     connection.end()
 }
 
-module.exports = {getTasks, getTaskById, postTask, putTaskById, deleteTaskById}
+export {getTasks, getTaskById, postTask, putTaskById, deleteTaskById}

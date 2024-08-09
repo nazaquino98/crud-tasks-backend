@@ -1,11 +1,11 @@
 //iniciar servidor
-const express = require("express")
+import express, { json } from "express"
 //crear servidor
-const app = express()
+const app = (express())
 //usar middlwares
-app.use(express.json())
+app.use(json())
 
-const router = require("./router/router.js") 
+import {router} from "./router/router.js" 
 
 app.use(router)
 

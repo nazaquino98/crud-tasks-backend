@@ -1,4 +1,5 @@
-const router = require("express").Router()
-const tasksRouter = require("./tasks.router.js")
+import { Router } from "express"
+const router = Router()
+import {tasksRouter} from "./tasks.router.js"
 router.use(tasksRouter)
-module.exports = router
+export {router}
